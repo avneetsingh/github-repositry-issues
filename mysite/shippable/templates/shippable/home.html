@@ -1,0 +1,81 @@
+{% extends "shippable/header.html" %}
+
+{% block content%}
+		{% for item in content1 %}
+		
+			</BR></BR></BR></BR>
+			<table border="1" style="width:80%" class="table">
+				<tr>
+					<td>Total number of open issues</td>
+					<td>{{item.noOfOpenIssues}}</td>
+				</tr>
+				<tr>
+					<td>Number of open issues that were opened in the last 24 hours</td>
+					<td>{{item.noOfOpenIssuesInLast24hr}}</td>
+				</tr>
+				<tr>
+					<td>Number of open issues that were opened more than 24 hours ago but less than 7 days ago   </td>
+					<td>{{item.noOfOpenIssuesMoreThan24hLessThan7d}}</td>
+				</tr>
+				<tr>
+					<td>Number of open issues that were opened more than 7 days ago </td>
+					<td>{{item.noOfOpenIssuesMoreThan7d}}</td>
+				</tr>
+				
+			</table>
+			</BR></BR></BR></BR>
+			<table border="1" style="width:100%" class="table">
+			  <caption><font size="5" color="Black">Open issues that were opened in the last 24 hours</font></caption>
+			  </BR></BR>
+				{% for f in item.second %}
+					{% for a in f.title %}
+						<tr><th colspan=4>   Title:  {{a.0}} </th><tr>
+						<tr><td>   Username :{{a.1}}   </td>
+						<td>   Created At :{{a.2}} </td>
+						<td>   Updated At :{{a.3}} </td>
+						<td>   Comments :{{a.4}} </td></tr>
+						<tr>
+						<td colspan=4 text-align:centre>   URL :{{a.5}} </td></tr>
+						<tr></tr>
+						<tr></tr>
+					{%endfor%}
+				{%endfor%}
+			</table>
+			</BR></BR></BR></BR></BR></BR>
+			<table border="1" style="width:100%" class="table">
+				<caption><font size="5" color="Black">Open issues that were opened more than 24 hours ago but less than 7 days ago</font></caption>
+				</BR></BR>
+				{% for f in item.third %}
+					{% for a in f.title %}
+						<tr><th colspan=4>   Title:  {{a.0}} </th><tr>
+						<tr><td>   Username :{{a.1}}   </td>
+						<td>   Created At :{{a.2}} </td>
+						<td>   Updated At :{{a.3}} </td>
+						<td>   Comments :{{a.4}} </td></tr>
+						<tr>
+						<td colspan=4>   URL :{{a.5}} </td></tr>
+						<tr></tr>
+						<tr></tr>
+					{%endfor%}
+				{%endfor%}
+			</table>
+			</BR></BR></BR></BR></BR></BR>
+			<table border="1" style="width:100%" class="table">
+			</BR></BR>
+			<caption><font size="5" color="Black">Open issues that were opened more than 7 days ago</font></caption>
+				{% for f in item.fourth %}
+					{% for a in f.title %}
+						<tr><th colspan=4>   Title:  {{a.0}} </th><tr>
+						<tr><td>   Username :{{a.1}}   </td>
+						<td>   Created At :{{a.2}} </td>
+						<td>   Updated At :{{a.3}} </td>
+						<td>   Comments :{{a.4}} </td></tr>
+						<tr>
+						<td colspan=4>   URL :{{a.5}} </td></tr>
+						
+					{%endfor%}
+				{%endfor%}
+			</table>
+		{% endfor %}
+		
+{%endblock%}

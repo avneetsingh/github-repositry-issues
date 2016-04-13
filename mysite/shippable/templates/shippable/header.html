@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shippable Assignement</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<meta charset="utf-8"/>
+</head>
+
+<body class="body style=background-color:#f6f6f6">
+	<div>
+		<form method="POST" action="/shippable/process">
+	`		{% csrf_token %}
+			<input type="text" value="*Enter User Name" name="textfield">
+			<input type="text" value="*Enter Repository Name" name="textfield2">
+			<input type="text" value="Provide your Access token" name="textfield3">
+			<button type="submit">Enter Guthub Url</button>
+		</form>
+	</div>
+	<div>
+	{% block content%}
+	
+	{%endblock%}
+	</div>
+</body>
+</html>
