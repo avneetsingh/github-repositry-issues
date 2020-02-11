@@ -1,6 +1,6 @@
 beautifulsoup4==4.4.1
 cycler==0.10.0
-django==1.10
+django==1.11.28
 exifread==2.1.2
 freetype-py==1.0.2
 html5lib==1.0b3
