@@ -17,7 +17,7 @@ plotly==1.9.6
 pmw==2.0.1
 pyDatalog==0.17.1
 pyparsing==2.1.0
-PyPDF2==1.25.1
+PyPDF2==1.27.5
 pypng==0.0.18
 python-docx==0.8.5
 pytz==2015.7
