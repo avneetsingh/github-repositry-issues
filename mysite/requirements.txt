@@ -19,7 +19,7 @@ pyDatalog==0.17.1
 pyparsing==2.1.0
 PyPDF2==1.25.1
 pypng==0.0.18
-python-docx==0.8.5
+python-docx==0.8.6
 pytz==2015.7
 requests==2.8.1
 six==1.10.0
